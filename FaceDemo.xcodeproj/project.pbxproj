@@ -15,6 +15,8 @@
 		15CEE92C20ABE30B0071B89D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CEE92B20ABE30B0071B89D /* main.m */; };
 		15CEE93620ABE30B0071B89D /* FaceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CEE93520ABE30B0071B89D /* FaceDemoTests.m */; };
 		15CEE94120ABE30B0071B89D /* FaceDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CEE94020ABE30B0071B89D /* FaceDemoUITests.m */; };
+		15CEE95720AC1B8D0071B89D /* FRCameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CEE95420AC1B8D0071B89D /* FRCameraManager.m */; };
+		15CEE95820AC1B8D0071B89D /* UIImage+FRResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CEE95620AC1B8D0071B89D /* UIImage+FRResize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		15CEE93C20ABE30B0071B89D /* FaceDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CEE94020ABE30B0071B89D /* FaceDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceDemoUITests.m; sourceTree = "<group>"; };
 		15CEE94220ABE30B0071B89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15CEE95320AC1B8D0071B89D /* FRCameraManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRCameraManager.h; sourceTree = "<group>"; };
+		15CEE95420AC1B8D0071B89D /* FRCameraManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRCameraManager.m; sourceTree = "<group>"; };
+		15CEE95520AC1B8D0071B89D /* UIImage+FRResize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FRResize.h"; sourceTree = "<group>"; };
+		15CEE95620AC1B8D0071B89D /* UIImage+FRResize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FRResize.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		15CEE91B20ABE30B0071B89D /* FaceDemo */ = {
 			isa = PBXGroup;
 			children = (
+				15CEE95220AC1B8C0071B89D /* FRCameraManager */,
 				15CEE91C20ABE30B0071B89D /* AppDelegate.h */,
 				15CEE91D20ABE30B0071B89D /* AppDelegate.m */,
 				15CEE91F20ABE30B0071B89D /* ViewController.h */,
@@ -130,6 +137,17 @@
 				15CEE94220ABE30B0071B89D /* Info.plist */,
 			);
 			path = FaceDemoUITests;
+			sourceTree = "<group>";
+		};
+		15CEE95220AC1B8C0071B89D /* FRCameraManager */ = {
+			isa = PBXGroup;
+			children = (
+				15CEE95320AC1B8D0071B89D /* FRCameraManager.h */,
+				15CEE95420AC1B8D0071B89D /* FRCameraManager.m */,
+				15CEE95520AC1B8D0071B89D /* UIImage+FRResize.h */,
+				15CEE95620AC1B8D0071B89D /* UIImage+FRResize.m */,
+			);
+			path = FRCameraManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15CEE95720AC1B8D0071B89D /* FRCameraManager.m in Sources */,
 				15CEE92120ABE30B0071B89D /* ViewController.m in Sources */,
 				15CEE92C20ABE30B0071B89D /* main.m in Sources */,
 				15CEE91E20ABE30B0071B89D /* AppDelegate.m in Sources */,
+				15CEE95820AC1B8D0071B89D /* UIImage+FRResize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C592BC3464;
 				INFOPLIST_FILE = FaceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangfurun.FaceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C592BC3464;
 				INFOPLIST_FILE = FaceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangfurun.FaceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
